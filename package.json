@@ -1,5 +1,5 @@
 {
-  "name": "grunt-hipchat-notifier",
+  "name": "grunt-hipchat-v2-notifier",
   "description": "Send grunt messages to a Hipchat channel (v2 API)",
   "version": "0.0.1",
   "homepage": "https://git.corp.yahoo.com/jasonmit/grunt-hipchat-v2-notifier",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/logankoester/grunt-hipchat-notifier.git"
+    "url": "git://github.com/logankoester/grunt-hipchat-v2-notifier.git"
   },
   "bugs": {
     "url": "https://git.corp.yahoo.com/jasonmit/grunt-hipchat-v2-notifier/issues"

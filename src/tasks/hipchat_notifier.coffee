@@ -1,6 +1,6 @@
 #
-# * grunt-hipchat-notifier
-# * https://github.com/logankoester/grunt-hipchat-notifier
+# * grunt-hipchat-v2-notifier
+# * https://github.com/logankoester/grunt-hipchat-v2-notifier
 # *
 # * Copyright (c) 2013-2014 Logan Koester
 # * Licensed under the MIT license.

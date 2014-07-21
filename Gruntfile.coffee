@@ -1,13 +1,13 @@
 #
-# * grunt-hipchat-notifier
-# * https://github.com/logankoester/grunt-hipchat-notifier
+# * grunt-hipchat-v2-notifier
+# * https://github.com/logankoester/grunt-hipchat-v2-notifier
 # *
 # * Copyright (c) 2013-2014 Logan Koester
 # * Licensed under the MIT license.
-# 
+#
 
 module.exports = (grunt) ->
-  
+
   # Project configuration.
   grunt.initConfig
     clean:
@@ -33,10 +33,10 @@ module.exports = (grunt) ->
         push: false
 
   grunt.loadTasks 'tasks'
-  
+
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-bump'
-  
+
   grunt.registerTask 'build', ['clean', 'coffee']
   grunt.registerTask 'default', ['build']
