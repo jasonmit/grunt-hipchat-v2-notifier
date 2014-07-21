@@ -6,7 +6,7 @@
 # * Licensed under the MIT license.
 #
 module.exports = (grunt) ->
-  HipchatClient = require 'hipchatter'
+  Hipchatter = require 'hipchatter'
 
   grunt.registerMultiTask 'hipchat_notifier', 'Send a message to a Hipchat room', ->
     grunt.config.requires 'hipchat_notifier.options.authToken'
