@@ -2,7 +2,7 @@
   module.exports = function(grunt) {
     var HipchatClient;
     HipchatClient = require('hipchatter');
-    return grunt.registerMultiTask('hipchatter', 'Send a message to a Hipchat room', function() {
+    return grunt.registerMultiTask('hipchat_notifier', 'Send a message to a Hipchat room', function() {
       var done, hipchat, options, params, _ref, _ref1;
       grunt.config.requires('hipchat_notifier.options.authToken');
       grunt.config.requires('hipchat_notifier.options.roomId');
