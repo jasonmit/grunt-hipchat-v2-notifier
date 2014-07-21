@@ -13,9 +13,9 @@ module.exports = (grunt) ->
     grunt.config.requires 'hipchat_notifier.options.roomId'
 
     options = @options(
-      from: 'GruntJS'
       color: 'yellow'
-      notify: 0
+      notify: false
+      message: 'Hello world'
       message_format: 'html'
     )
 
@@ -25,15 +25,15 @@ module.exports = (grunt) ->
     done = @async()
     hipchat = new Hipchatter(options.authToken)
 
-    grunt.verbose.writeln "Room: #{options.room}"
+    grunt.verbose.writeln "Room: #{options.roomId}"
     grunt.log.writeln 'Sending Hipchat notification...'
 
     params =
-      from: options.from?() ? options.from
       color: options.color?() ? options.color
-      notify: options.notify
-      message: options.message()
+      message: options.message
       message_format: options.message_format
+      notify: options.notify
+      token: options.token
 
     hipchat.notify options.roomId, params, (success) ->
       grunt.log.writeln 'Notification sent!'
