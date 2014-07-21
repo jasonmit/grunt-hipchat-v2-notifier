@@ -6,9 +6,9 @@
 # * Licensed under the MIT license.
 #
 module.exports = (grunt) ->
-  HipchatClient = require 'hipchat-client'
+  HipchatClient = require 'hipchatter'
 
-  grunt.registerMultiTask 'hipchat_notifier', 'Send a message to a Hipchat room', ->
+  grunt.registerMultiTask 'hipchatter', 'Send a message to a Hipchat room', ->
     grunt.config.requires 'hipchat_notifier.options.authToken'
     grunt.config.requires 'hipchat_notifier.options.roomId'
 
@@ -23,7 +23,7 @@ module.exports = (grunt) ->
 
     grunt.verbose.writeln "Token: #{options.authToken}"
     done = @async()
-    hipchat = new HipchatClient(options.authToken)
+    hipchat = new Hipchatter(options.authToken)
 
     grunt.verbose.writeln "Room: #{options.room}"
     grunt.log.writeln 'Sending Hipchat notification...'
@@ -32,8 +32,9 @@ module.exports = (grunt) ->
       from: options.from?() ? options.from
       color: options.color?() ? options.color
       notify: options.notify
+      message: options.message()
       message_format: options.message_format
 
-    hipchat.sendRoomMessage options.message?() ? options.message, options.roomId, params, (success) ->
+    hipchat.notify options.roomId, params, (success) ->
       grunt.log.writeln 'Notification sent!'
       done()
