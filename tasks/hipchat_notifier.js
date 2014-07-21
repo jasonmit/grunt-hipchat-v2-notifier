@@ -4,7 +4,6 @@
     Hipchatter = require('hipchatter');
     return grunt.registerMultiTask('hipchat_notifier', 'Send a message to a Hipchat room', function() {
       var done, hipchat, options, params, _ref;
-      grunt.config.requires('hipchat_notifier.options.authToken');
       grunt.config.requires('hipchat_notifier.options.roomId');
       options = this.options({
         color: 'yellow',

@@ -9,7 +9,6 @@ module.exports = (grunt) ->
   Hipchatter = require 'hipchatter'
 
   grunt.registerMultiTask 'hipchat_notifier', 'Send a message to a Hipchat room', ->
-    grunt.config.requires 'hipchat_notifier.options.authToken'
     grunt.config.requires 'hipchat_notifier.options.roomId'
 
     options = @options(
