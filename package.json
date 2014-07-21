@@ -1,8 +1,8 @@
 {
   "name": "grunt-hipchat-notifier",
-  "description": "Send grunt messages to a Hipchat channel",
-  "version": "0.2.2",
-  "homepage": "https://github.com/logankoester/grunt-hipchat-notifier",
+  "description": "Send grunt messages to a Hipchat channel (v2 API)",
+  "version": "0.0.1",
+  "homepage": "https://git.corp.yahoo.com/jasonmit/grunt-hipchat-v2-notifier",
   "author": {
     "name": "Logan Koester",
     "email": "logan@logankoester.com",
@@ -13,12 +13,12 @@
     "url": "git://github.com/logankoester/grunt-hipchat-notifier.git"
   },
   "bugs": {
-    "url": "https://github.com/logankoester/grunt-hipchat-notifier/issues"
+    "url": "https://git.corp.yahoo.com/jasonmit/grunt-hipchat-v2-notifier/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/logankoester/grunt-hipchat-notifier/blob/master/LICENSE-MIT"
+      "url": "https://git.corp.yahoo.com/jasonmit/grunt-hipchat-v2-notifier/blob/master/LICENSE-MIT"
     }
   ],
   "main": "tasks/hipchat_notifier.js",
@@ -43,6 +43,6 @@
     "notifier"
   ],
   "dependencies": {
-    "hipchat-client": "^1.0.2"
+    "hipchatter": "^0.1.3"
   }
 }
