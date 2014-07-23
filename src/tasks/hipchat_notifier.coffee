@@ -29,7 +29,7 @@ module.exports = (grunt) ->
 
     params =
       color: options.color?() ? options.color
-      message: options.message
+      message: options.message?() ? options.message
       message_format: options.message_format
       notify: options.notify
       token: options.token
