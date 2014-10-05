@@ -30,7 +30,7 @@ grunt.initConfig({
     // You probably want to set your Hipchat options globally...
 
     options: {
-      authToken: "", // Create an authToken at https://hipchat.com/admin/api
+      token: "", // Create an token for the room @ https://hipchat.com/
       roomId: "" // Numeric Hipchat roomId or room name
     },
 
@@ -39,7 +39,6 @@ grunt.initConfig({
     hello_grunt: {
       options: {
         message: "Hello!", // A message to send
-        token: "", // room token ID (new to API)
         color: "purple", // Color of the message
         message_format: "html" // Can either be 'text' or 'html' format
       }
